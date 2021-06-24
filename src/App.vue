@@ -1,5 +1,6 @@
 <template>
 <h1>Ninja reaction Timer </h1>
+<button @click="start">play</button>
 </template>
 
 <script>
@@ -7,6 +8,19 @@
 export default {
   name: 'App',
   components: {
+  },
+  data(){
+    return {
+      isPlaying: false,
+      delay:null
+    }
+  },
+  methods:{
+    start(){
+      this.delay = 2000 + Math.random() * 5000
+      this.isPlaying = true
+      console.log(this.delay)
+    }
   }
 }
 </script>
@@ -14,7 +28,7 @@ export default {
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
+  -webkit-fonAt-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #444;
