@@ -7,8 +7,10 @@ Timer App game in Vue.js 💻
 ## Running Project setup
 ```
 npm install
+
 ```
 npm run serve
+```
 ```
 npm run build
 ```
